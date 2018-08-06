@@ -1,12 +1,11 @@
 #!/bin/python
 from twilio.rest import *
 from datetime import datetime, timezone
+import config
 
 class Messages:
     #setup Twilio
-    account_sid = 'AC#############################'
-    auth_token = '##############################'
-    client = Client(account_sid, auth_token)
+    client = Client(config.account['account_sid'], config.account['auth_token'])
 
 
 ##### Prints all messages for no good reason #####
